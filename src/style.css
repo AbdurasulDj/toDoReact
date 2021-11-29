@@ -24,7 +24,7 @@
 }
 
 .flex-space-around {
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .flex-row {
@@ -35,7 +35,7 @@
     flex-direction: column;
 }
 
-.my-1 {
+.my-02 {
     margin: .2rem 0; 
 }
 
@@ -62,14 +62,20 @@
 }
 
 .button {
-    border: 1px solid red;
+    border: 1.5px solid rgba(255, 0, 0, .6);
     border-radius: 2rem;
     text-align: center;
-    color: red;
+    color: #000;
+    background-color: #fff;
     font-size: 1rem;
-    /* width: 2rem; */
-    /* height: 2rem; */
+    font-weight: bold;
+    transition-duration: 0.5s;
     transform: rotate(45deg);
+}
+
+.button:hover {
+    border: 1.5px solid rgba(255, 0, 0, 1);
+    background-color: rgb(236, 158, 158);
 }
 
 .border {

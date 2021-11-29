@@ -9,14 +9,14 @@ class TodoRow extends React.Component {
     }
 
     inputHandler = (e) => {
-        this.props.onTextChange( e.target.value, this.props.id);
+        this.props.onTextChange( e.target.value, this.props.number);
     } 
     render() { 
         return ( 
-                <div className="flex-container flex-row flex-space-around w-100 border my-1">
-                    <p>{this.props.number}</p> 
+                <div className="flex-container flex-row flex-space-around w-100 border my-02">
+                    <p className=" ">{this.props.number}</p> 
                     <input className="w-70 m-0 p-0 input" onChange={this.inputHandler} value={this.props.text}/>
-                    <button className="button" type="checkbox">+</button>
+                    <button className="button" type="button">+</button>
                 </div>
             );
     }

@@ -16,10 +16,12 @@ class ToDo extends React.Component {
         })
     }
 
-    handleTextChange= (newText,id) => {
-            // this.setState({text: newText });
-
-            console.log(this.state.text, id)
+    handleTextChange= (newText,number) => {
+                this.setState( prevState => ({
+                    data: prevState.data.map(
+                        obj => (obj.number === number ? Object.assign({}, obj, { text: newText}) : obj)
+                    )
+                }))
     }
 
     render() {
@@ -31,7 +33,6 @@ class ToDo extends React.Component {
                     {
                         this.state.data.map( 
                             (obj) => {
-                                console.log(obj.id);
                                 return <Row 
                                     key={obj.id} 
                                     number={obj.number} 
