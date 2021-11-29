@@ -2,7 +2,7 @@
 
 I created this app for my learning and personal use purposes
 
-## Used:
+## Used Technologies:
 
 ### HTML
 ### CSS

@@ -24,12 +24,31 @@ class ToDo extends React.Component {
                 }))
     }
 
+    handleButtonChange= (number) => {
+                this.setState( prevState => ({
+                    data: prevState.data.map(
+                        obj => (obj.number === number  ? 
+                            (obj.done === false ? Object.assign({}, obj, { done: true}) : Object.assign({}, obj, { done: false})) :
+                            (obj)
+                            )
+                        )
+                    })
+                ) 
+    }
+
     render() {
         
         return ( 
                 <div className="flex-container flex-column flex-center">
                     <p className="todo-text">My ToDo</p>
-
+                    <Row 
+                        key={} 
+                        number={} 
+                        text={} 
+                        done={}
+                        onTextChange={}
+                        onButtonChange={}
+                    />
                     {
                         this.state.data.map( 
                             (obj) => {
@@ -39,6 +58,7 @@ class ToDo extends React.Component {
                                     text={obj.text} 
                                     done={obj.done}
                                     onTextChange={this.handleTextChange}
+                                    onButtonChange={this.handleButtonChange}
                                 />
                         })
                     }
